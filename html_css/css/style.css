@@ -38,7 +38,7 @@ a{
 	margin: 15px 0;
 }
 .forgot:hover {
-	color: #ff4b2b;
+	color: #557a95;
 }
 #back {
 	position: relative;
@@ -92,6 +92,7 @@ a{
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+	font-family: Montserrat;
 }
 .form-container button
 {
@@ -101,8 +102,8 @@ a{
 button
 {
 	border-radius: 20px;
-	border: 1px solid #ff4b2b;
-	background: #ff4b2b;
+	border: 1px solid #557a95;
+	background: #557a95;
 	color: #fff;
 	font-size: 12px;
 	font-weight: bold;
@@ -126,8 +127,8 @@ button.over-btn
 }
 .social:hover
 {
-	color: #ffaa23;
-	border-color: #ffaa23;
+	color: #0e76a8;
+	border-color: #0e76a8;
 }
 .form-container
 {
@@ -153,23 +154,23 @@ button.over-btn
 }
 .signup-container button
 {
-	background: #ff4b2b;
-	border-color: #ff4b2b;
+	background: #557a95;
+	border-color: #557a95;
 }
 .signup-container .social:hover
 {
-	color: #ff4b2b;
-	border-color: #ff4b2b;
+	color: #557a95;
+	border-color: #557a95;
 }
 .signin-container .social:hover
 {
-	color: #ff4b2b;
-	border-color: #ff4b2b;
+	color: #557a95;
+	border-color: #557a95;
 }
 .signin-container button
 {
-	background: #ff4b2b;
-	border-color: #ff4b2b;
+	background: #557a95;
+	border-color: #557a95;
 }
 .signin-container .forgot
 {
@@ -194,7 +195,7 @@ button.over-btn
 
 .overlay
 {
-	background: #ff4b2b;
+	background: #557a95;
 	color: #fff;
 	position: relative;
 	left: -100%;

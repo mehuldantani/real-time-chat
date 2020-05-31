@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 :root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
+	--dark-color-a: #557a95;
+	--dark-color-b: #7395ae;
 	--light-color: #f6f5f7;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
@@ -99,7 +99,7 @@ a {
     overflow: auto;
 }
 
-.chat-messages .message {
+ .message {
 	float: left;
 	clear: both;
 	padding: 10px;
@@ -108,13 +108,10 @@ a {
 	border-radius: 5px;
 }
 
-.send{
-	float: right;
-	clear: both;
-}
 
 .message {
-	min-width: 120px;
+	min-width: 20%;
+	max-width: 80%;
 }
 
 .chat-messages .message .meta {
@@ -130,6 +127,11 @@ a {
 .chat-messages .message .meta span {
 	color: #777;
 	font-size: 10px;
+}
+
+.send{
+	float: right;
+	clear: both;
 }
 
 .chat-form-container {
