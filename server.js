@@ -11,33 +11,34 @@ const io = socketio(server);
 const bot = 'Admin';
 
 //bring our static files to this server
-app.use(express.static(path.join(__dirname,'html_css')));
+app.use(express.static(path.join(__dirname, 'html_css')));
 
 //to be executed when users connects
 
-io.on('connection',socket =>{
+io.on('connection', socket => {
 
-//notifies that user is connected
-socket.emit('message',messageStructure(bot,'you are connected.'));
+    //notifies that user is connected
+    socket.emit('message', messageStructure(bot, 'you are connected.'));
 
-//notifies others that new users is connected now
-socket.broadcast.emit('message',messageStructure(bot,'New user is connected now.'));
+    //notifies others that new users is connected now
+    debugger;
+    socket.broadcast.emit('message', messageStructure(bot, 'New user is connected now.'));
 
-//when user got disconnected
-socket.on('disconnect',()=> {
-    io.emit('message',messageStructure(bot,'user disconnected.'));
-});
+    //when user got disconnected
+    socket.on('disconnect', () => {
+        io.emit('message', messageStructure(bot, 'user disconnected.'));
+    });
 
 
-//listen to incoming messages
-socket.on('chat-msg',msg =>{
-socket.broadcast.emit('message',messageStructure('USER',msg));
-})
+    //listen to incoming messages
+    socket.on('chat-msg', msg => {
+        socket.broadcast.emit('message', messageStructure('USER', msg));
+    })
 
 });
 
 //asking server to listen on the said port
 const port = 5500 || process.env.port;
 
-server.listen(port, ()=>
+server.listen(port, () =>
     console.log(`Server is running on ${port}`));
