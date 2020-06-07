@@ -96,7 +96,8 @@ a {
 	padding: 30px;
 	max-height: 500px;
     overflow-y: scroll;
-    overflow: auto;
+	overflow: auto;
+	background-color: #f6f5f7;
 }
 
  .message {
@@ -104,14 +105,12 @@ a {
 	clear: both;
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: var(--light-color);
+	background-color: #fff;
 	border-radius: 5px;
-}
-
-
-.message {
 	min-width: 20%;
 	max-width: 80%;
+	height: auto;
+	word-wrap: break-word;
 }
 
 .chat-messages .message .meta {
@@ -124,7 +123,7 @@ a {
 	justify-content: space-between;
 }
 
-.chat-messages .message .meta span {
+span {
 	color: #777;
 	font-size: 10px;
 }
@@ -132,6 +131,7 @@ a {
 .send{
 	float: right;
 	clear: both;
+	background-color: #e0e0e0;
 }
 
 .chat-form-container {
