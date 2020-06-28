@@ -2,9 +2,13 @@ const path = require('path');
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io');
+const mongoose = require("mongoose");
+const bodyparser = require('body-parser');
 const messageStructure = require('./others/messages');
-
-const app = express();
+const app = require('./app')
+//for creating the server
+app.use(bodyparser.urlencoded({extended:false}));
+app.use(bodyparser.json());
 const server = http.createServer(app);
 const io = socketio(server);
 
@@ -38,7 +42,7 @@ io.on('connection', socket => {
 });
 
 //asking server to listen on the said port
-const port = 5500 || process.env.port;
+const port = process.env.port || 5500;
 
 server.listen(port, () =>
     console.log(`Server is running on ${port}`));
